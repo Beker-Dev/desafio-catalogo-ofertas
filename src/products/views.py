@@ -9,5 +9,5 @@ class ProductView(View):
         super().setup(request, *args, **kwargs)
     
     def get(self, request, *args, **kwargs):
+        print('request test', request, args, kwargs)
         return render(request, self.template_name)
-    

@@ -1,12 +1,21 @@
 {% extends 'base.html' %}
 
 {% block 'title' %}
-Index
+{% if not request.GET.search %}
+    Index
+{% else %}
+    {{ request.GET.search|title }}
+{% endif %}
+
 {% endblock %}
 
 {% block 'content' %}
 <div>
-    
+    {% if not request.GET.search %}
+        {% include 'products/search.html' %}
+    {% else %}
+        {% include 'partials/navbar.html' %}
+    {% endif %}
 </div>
 {% endblock %}
 

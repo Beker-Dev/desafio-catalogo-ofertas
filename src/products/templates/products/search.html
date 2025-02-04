@@ -1,9 +1,6 @@
-{% extends 'products/index.html' %}
-
-{% block 'title' %}
-    {% if not request.GET.search %}
-        Pesquisar... |
-    {% else %}
-        {{ request.GET.search|title }} | Pesquisar
-    {% endif %}
-{% endblock %}
+<div class="search-container text-center">
+    <form class="d-flex" role="search" action="{% url 'products:index' %}">
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" name="search" value={{ request.GET.search }}>
+        <button class="btn btn-primary" type="submit">Buscar</button>
+    </form>
+</div>
