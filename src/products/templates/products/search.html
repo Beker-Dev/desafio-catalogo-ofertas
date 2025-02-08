@@ -1,6 +1,8 @@
-<div class="search-container text-center">
-    <form class="d-flex" role="search" action="{% url 'products:index' %}">
-        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" name="search" value={{ request.GET.search }}>
-        <button class="btn btn-primary" type="submit">Buscar</button>
-    </form>
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="search-container text-center">
+        <form class="d-flex" role="search" action="{% url 'products:index' %}">
+            <input class="form-control me-2 products-main-searchbar" type="search" placeholder="Buscar" aria-label="Search" name="search" value="{{ request.GET.search }}">
+            <button class="btn btn-primary" type="submit">Buscar</button>
+        </form>
+    </div>
 </div>

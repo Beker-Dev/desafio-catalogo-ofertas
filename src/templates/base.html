@@ -9,8 +9,8 @@
     {% bootstrap_javascript %}
 </head>
 
-<body>
-    <div>
+<body class="d-flex flex-column min-vh-100">
+    <div class="flex-grow-1 d-flex flex-column align-items-center justify-content-center">
         {% block 'content' %}{% endblock %}
     </div>
 
